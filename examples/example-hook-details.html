@@ -73,11 +73,12 @@
 			/*
 			 * This hook adds autosizing functionality
 			 * to your textarea
-			 */			
+			 */
+			
 			BehaveHooks.add(['init:before'], function(data){ _log('Behave about to Initialize'); });
 			BehaveHooks.add(['init:after'], function(data){ _log('Behave Initialized'); });
 			
-			BehaveHooks.add(['enter:before'], function(data){ console.log(data); _log('Enter pressed on line '+data.lines.current); });
+			BehaveHooks.add(['enter:before'], function(data){ _log('Enter pressed on line '+data.lines.current); });
 			BehaveHooks.add(['enter:after'], function(data){ _log('Now on line '+data.lines.current); });
 			
 			BehaveHooks.add(['tab:before'], function(data){ _log('Pressed tab at char '+data.caret.pos); });
